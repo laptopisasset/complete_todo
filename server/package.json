@@ -1,6 +1,9 @@
 {
-  "name": "complete_todo/server",
+  "name": "server",
   "version": "1.0.0",
   "main": "server.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
