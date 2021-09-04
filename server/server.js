@@ -11,7 +11,7 @@ app.use(express.json());
 routes(app);
 
 app.use((err, req, res, next) => {
-  res.send(err.status || 500).json({ errror: { message: err.message } });
+  res.send(err.code || 500).json({ errror: { message: err.message } });
   next();
 });
 
