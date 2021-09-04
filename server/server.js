@@ -2,12 +2,15 @@ const express = require("express");
 
 const routes = require("./src/routes");
 
+const { logs } = require("./src/middleware");
+
 const app = express();
 
 const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 
+app.use(logs());
 routes(app);
 
 app.use((err, req, res, next) => {
